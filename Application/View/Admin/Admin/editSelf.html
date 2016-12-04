@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加管理员</title>
+</head>
+<body>
+<form method="post" action="index.php?p=Admin&c=Admin&a=editSelf">
+    用户名: <input type="text" name="username" value="<?php echo $username?>"/><br/>
+    email: <input type="text" name="email" value="<?php echo $email?>"/><br/>
+    旧密码: <input type="text" name="old_password"  value=""/><br/>
+    新密码: <input type="text" name="password"  value=""/><br/>
+    确认密码: <input type="text" name="repassword"  value=""/><br/>
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>

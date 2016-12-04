@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="index.php?p=Admin&c=Category&a=edit" method="post">
+    <input type="hidden" name="id" value="<?php echo $id;?>"/>
+    分类名称:<input type="text" name="name" value="<?php echo $name;?>"/><br/>
+    上级分类：
+    <select name="parent_id">
+        <option value="0">顶级分类</option>
+        <?php foreach($category as $value):?>
+            <option <?php echo $parent_id==$value['id'] ? "selected":'';?> value="<?php echo $value['id'];?>"><?php echo $value['name_text'];?></option>
+        <?php endForeach;?>
+    </select><br/>
+    描述：<textarea name="intro"><?php echo $intro;?></textarea><br/>
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>
